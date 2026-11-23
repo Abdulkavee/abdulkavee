@@ -1,0 +1,30 @@
+date,type,category,merchant,description,payment_method,amount_inr,is_recurring
+2026-09-01,income,Salary,TechNova Labs,Monthly Internship Stipend & Allowance,Net Banking,28000,true
+2026-09-02,expense,Rent,GreenView PG & Flats,House Rent,Net Banking,7500,true
+2026-09-05,expense,Bills,Airtel Fiber,Airtel Fiber Broadband,UPI,999,true
+2026-09-08,expense,Bills,BESCOM Electricity,BESCOM Electricity Bill,UPI,1180,true
+2026-09-10,expense,Entertainment,Spotify Premium,Spotify & Cloud Storage,Debit Card,249,true
+2026-09-12,income,Freelance,Upwork Client,Python & Web Freelance Milestone,Net Banking,5000,false
+2026-09-14,expense,Food,Swiggy,Swiggy Masala Dosa & Biryani Order,UPI,265,false
+2026-09-16,expense,Transport,Uber Auto,Uber Auto Commute to Campus,UPI,150,false
+2026-09-19,expense,Shopping,DMart Supermarket,DMart Monthly Groceries & Essentials,UPI,610,false
+2026-09-22,expense,Education,Udemy,Scikit-Learn & Time-Series Course,Debit Card,549,false
+2026-10-01,income,Salary,TechNova Labs,Monthly Internship Stipend & Allowance,Net Banking,28000,true
+2026-10-02,expense,Rent,GreenView PG & Flats,House Rent,Net Banking,7500,true
+2026-10-05,expense,Bills,Airtel Fiber,Airtel Fiber Broadband,UPI,999,true
+2026-10-08,expense,Bills,BESCOM Electricity,BESCOM Electricity Bill,UPI,1140,true
+2026-10-10,expense,Entertainment,Spotify Premium,Spotify & Cloud Storage,Debit Card,249,true
+2026-10-12,income,Freelance,Upwork Client,Python & Web Freelance Milestone,Net Banking,6500,false
+2026-10-15,expense,Food,Zomato,Zomato Veg Thali Dinner,UPI,240,false
+2026-10-18,expense,Healthcare,Apollo Pharmacy,Vitamins & Cold Relief Tablets,UPI,315,false
+2026-10-21,expense,Shopping,Amazon India,Amazon USB-C Hub & Cables,Credit Card,720,false
+2026-10-25,expense,Travel,IRCTC Rail,Weekend Train Ticket Home,UPI,640,false
+2026-11-01,income,Salary,TechNova Labs,Monthly Internship Stipend & Allowance,Net Banking,28000,true
+2026-11-02,expense,Rent,GreenView PG & Flats,House Rent,Net Banking,7500,true
+2026-11-05,expense,Bills,Airtel Fiber,Airtel Fiber Broadband,UPI,999,true
+2026-11-08,expense,Bills,BESCOM Electricity,BESCOM Electricity Bill,UPI,1290,true
+2026-11-10,expense,Entertainment,Spotify Premium,Spotify & Cloud Storage,Debit Card,249,true
+2026-11-12,income,Freelance,Upwork Client,Python & Web Freelance Milestone,Net Banking,8500,false
+2026-11-14,expense,Shopping,Croma Electronics,Mechanical Keyboard & Headphones (Anomalous Spike),Credit Card,6450,false
+2026-11-17,expense,Food,Barbeque Nation,Team Project Celebration Group Dinner (Anomalous Spike),Credit Card,2850,false
+2026-11-20,expense,Shopping,ABC Supermarket,ABC Supermarket Receipt (Milk 60, Bread 40, Rice 120),UPI,220,false

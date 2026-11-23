@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-navy-950: #050811;
+  --color-navy-900: #0b132b;
+  --color-navy-800: #131f42;
+  --color-navy-700: #1d2d5c;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color-scheme: light;
+    background-color: #f3f6fb;
+    color: #0f172a;
+  }
+
+  html.dark {
+    color-scheme: dark;
+    background-color: #050811;
+    color: #f8fafc;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: transparent;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  button:not(:disabled),
+  a[href],
+  select:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ============================================================================
+   APPLE-INSPIRED AMBIENT CANVAS & FROSTED GLASS SURFACES
+   ============================================================================ */
+
+.app-canvas {
+  background-color: #f2f5fa;
+  background-image:
+    radial-gradient(60% 45% at 12% 0%, rgba(59, 130, 246, 0.11) 0%, transparent 65%),
+    radial-gradient(50% 40% at 92% 10%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(45% 40% at 50% 100%, rgba(6, 182, 212, 0.06) 0%, transparent 65%);
+  background-attachment: fixed;
+}
+
+.dark .app-canvas {
+  background-color: #050811;
+  background-image:
+    radial-gradient(65% 45% at 15% 0%, rgba(37, 99, 235, 0.18) 0%, transparent 62%),
+    radial-gradient(50% 42% at 88% 8%, rgba(124, 58, 237, 0.13) 0%, transparent 58%),
+    radial-gradient(50% 45% at 50% 100%, rgba(6, 182, 212, 0.09) 0%, transparent 65%);
+  background-attachment: fixed;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 12px 30px -14px rgba(15, 23, 42, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 16px 38px -18px rgba(0, 0, 0, 0.72),
+    inset 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+
+.glass-card-hover {
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(59, 130, 246, 0.28);
+  box-shadow:
+    0 16px 36px -14px rgba(15, 23, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dark .glass-card-hover:hover {
+  border-color: rgba(96, 165, 250, 0.28);
+  background: rgba(20, 30, 54, 0.68);
+  box-shadow:
+    0 20px 44px -16px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(96, 165, 250, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.11);
+}
+
+.glass-sidebar {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(26px) saturate(180%);
+  -webkit-backdrop-filter: blur(26px) saturate(180%);
+  border-right: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dark .glass-sidebar {
+  background: rgba(8, 12, 26, 0.78);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-header {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dark .glass-header {
+  background: rgba(7, 11, 23, 0.74);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-popover {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(28px) saturate(180%);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 24px 56px -12px rgba(15, 23, 42, 0.22);
+}
+
+.dark .glass-popover {
+  background: rgba(13, 20, 38, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 24px 64px -12px rgba(0, 0, 0, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+.glass-balance-hero {
+  background:
+    radial-gradient(110% 130% at 100% 0%, rgba(56, 189, 248, 0.22) 0%, transparent 55%),
+    radial-gradient(90% 120% at 0% 100%, rgba(124, 58, 237, 0.22) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(11, 19, 43, 0.94) 0%, rgba(15, 27, 61, 0.92) 55%, rgba(12, 20, 44, 0.95) 100%);
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 24px 54px -20px rgba(11, 19, 43, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  color: #0f172a;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+}
+
+.dark .glass-input {
+  background: rgba(15, 23, 42, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  color: #f8fafc;
+}
+
+.dark .glass-input::placeholder {
+  color: #64748b;
+}
+
+.dark .glass-input:focus {
+  border-color: rgba(96, 165, 250, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.22);
+}
+
+.dark select.glass-input option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Custom sleek range slider for What-If Budget Simulator */
+input[type="range"].fin-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+  outline: none;
+}
+
+.dark input[type="range"].fin-slider {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+input[type="range"].fin-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.45);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].fin-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.14);
+}
+
+/* OCR scanning laser beam animation */
+@keyframes scanBeam {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0.2;
+  }
+}
+
+.animate-scan-beam {
+  animation: scanBeam 2.1s ease-in-out infinite alternate;
+}
+
+/* Sleek glass shimmer skeleton */
+@keyframes glassShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.glass-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.12) 25%,
+    rgba(148, 163, 184, 0.24) 50%,
+    rgba(148, 163, 184, 0.12) 75%
+  );
+  background-size: 200% 100%;
+  animation: glassShimmer 1.6s ease-in-out infinite;
+}
+
+.dark .glass-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 75%
+  );
+  background-size: 200% 100%;
+}
+
+/* Subtle custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

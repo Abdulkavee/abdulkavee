@@ -1,0 +1,6 @@
+{
+  "name": "LedgerIQ — Automated Expense Tracker",
+  "description": "Track Smarter. Predict Spending. Save Better. Full-stack personal finance platform with Tesseract OCR receipt parsing, 30-day time-series expense forecasting, ML categorization, anomaly detection, and Gemini RAG financial assistant.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
